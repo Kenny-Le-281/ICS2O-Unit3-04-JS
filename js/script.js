@@ -6,14 +6,23 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Test/sw.js", {
-    scope: "/ICS2O-PWA-Test/",
+  navigator.serviceWorker.register("/ICS2O-Unit3-04-JS/sw.js", {
+    scope: "/ICS2O-Unit3-04-JS/",
   })
 }
 
+'use strict'
+
 /**
- * This function displays an alert.
+ * This function converts Fahrenheit to Celsius.
  */
-function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+function convert () {
+  // input
+  const fahrenheit = parseFloat(document.getElementById('fahrenheit').value)
+
+  // process
+  const celsius = (fahrenheit - 32) * 5 / 9
+
+  // output
+  document.getElementById('celsius').innerHTML = fahrenheit + ' ℉ in celsius is equal to: ' + celsius.toFixed(2) + ' ℃'
 }
