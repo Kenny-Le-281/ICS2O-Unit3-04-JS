@@ -11,18 +11,19 @@ if (navigator.serviceWorker) {
   })
 }
 
-'use strict'
+;("use strict")
 
 /**
  * This function converts Fahrenheit to Celsius.
  */
-function convert () {
+function convert() {
   // input
-  const fahrenheit = parseFloat(document.getElementById('fahrenheit').value)
+  const fahrenheit = parseFloat(document.getElementById("fahrenheit").value)
 
   // process
-  const celsius = (fahrenheit - 32) * 5 / 9
+  const celsius = ((fahrenheit - 32) * 5) / 9
 
   // output
-  document.getElementById('celsius').innerHTML = fahrenheit + ' ℉ in celsius is equal to: ' + celsius.toFixed(2) + ' ℃'
+  document.getElementById("celsius").innerHTML =
+    fahrenheit + " ℉ in celsius is equal to: " + celsius.toFixed(2) + " ℃"
 }
